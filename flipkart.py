@@ -13,8 +13,11 @@ products = []
 prices = []
 ratings = []
 
-driver.get("https://www.flipkart.com/ckf/czl/~cs-1zk8p4dgbr/pr?sid=ckf%2Cczl&collection-tab-name=Large+Screen+TVs-DT&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkxhcmdlIFNjcmVlbiBUVnMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19&wid=7.productCard.PMU_V2_3")
-# driver.get("https://www.flipkart.com/clothing-and-accessories/topwear/tshirt/men-tshirt/pr?sid=clo,ash,ank,edy&otracker=categorytree&otracker=nmenu_sub_Men_0_T-Shirts")
+# driver.get("")
+
+# mobile phones
+driver.get("")
+# driver.get("")
 
 content = driver.page_source
 soup = BeautifulSoup(content)
@@ -34,4 +37,4 @@ print(products,prices,ratings)
 print(len(products),len(prices),len(ratings))
 df = pd.DataFrame(
     {'Product Name': products, 'Price': prices, 'Rating': ratings})
-df.to_csv('products.csv', index=False, encoding='utf-8')
+df.to_csv('phones.csv', index=False, encoding='utf-8')
